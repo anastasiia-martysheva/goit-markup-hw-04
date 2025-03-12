@@ -110,6 +110,7 @@ display: flex;
         color: #2e2f42;
         padding-bottom: 24px;
         padding-top: 24px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-nav-link {
@@ -129,7 +130,7 @@ display: flex;
     color: #404bbf ;
 }
 
-.current::before{
+.current::after{
     content: "";
     position: absolute;
     left: 0;
@@ -140,7 +141,7 @@ display: flex;
         height: 4px;
 }
 
-.item-nav-link:hover, .item-nav-link:focus{
+.item-nav-link-one:hover, .item-nav-link:focus{
     color: #404bbf;
 }
 
@@ -176,7 +177,7 @@ display: flex;
 /*#region hero*/
 .hero {
     background-color: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -213,6 +214,7 @@ display: flex;
         border-radius: 4px;
         min-width: 169px;
         height: 56px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-container{
@@ -422,6 +424,7 @@ width: 100%;
 
 }
 
+
 .portfolio-title-two {
         font-weight: 500;
         font-size: 20px;
@@ -431,6 +434,12 @@ width: 100%;
         margin-bottom: 8px;
 }
 
+.portfolio-list-item:hover{
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+
+}
 .portfolio-text {
        
     font-size: 16px;
@@ -473,7 +482,9 @@ overflow: hidden;
 .portfolio-list-item:hover .overlay{
     transform: translateY(0);
     opacity: 1;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 /*#endregion portfolio */
 
@@ -552,12 +563,10 @@ gap: 16px;
     height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
-    color: ;
-    transition: backgroung-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .footer-link:hover, .footer-link:focus{
-    background-color: #31D0AA;
+    background-color: #31d0aa;
 }
 .footer-ic-img{
 fill: #f4f4fd;
